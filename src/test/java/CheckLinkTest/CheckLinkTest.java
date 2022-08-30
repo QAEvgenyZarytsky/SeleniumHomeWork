@@ -1,23 +1,18 @@
 package CheckLinkTest;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class CheckLink {
+public class CheckLinkTest extends BaseTest {
     @Test
     public void checkLink() {
-        System.setProperty("webdriver.chrome.driver", "C:\\driver\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:\\driver\\chromedriver.exe");
         //если уберу сторчку выше то код не работает, в path всё прописывал, не могу понять чего так происходит
-
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://the-internet.herokuapp.com");
+        //добавил BaseTest теперь всё работает, чего так происходит не знаю!
 
         List<WebElement> elementsLink = driver.findElements(By.tagName("a"));
         System.out.println("This is 9 element:");
