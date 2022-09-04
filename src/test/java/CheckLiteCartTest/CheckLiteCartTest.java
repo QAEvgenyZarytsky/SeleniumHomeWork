@@ -9,16 +9,14 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
-public class CheckLiteCartTest {
+public class CheckLiteCartTest  extends BaseForCheckLiteCartTest{
 
-    WebDriver driver = new ChromeDriver();
 
 
     @Test
     public void checkHomePage() {
 
-        driver.manage().window().maximize();
-        driver.get("https://litecart.stqa.ru/en/");
+
 
         String homePage = driver.getTitle();
 
@@ -39,8 +37,7 @@ public class CheckLiteCartTest {
 
     @Test
     public void checkRubberDucks() {
-        driver.manage().window().maximize();
-        driver.get("https://litecart.stqa.ru/en/");
+
 
         String trueTitleOfRubberDucks = "Rubber Ducks | My Store1";
 
@@ -62,8 +59,7 @@ public class CheckLiteCartTest {
 
     @Test
     public void checkDeliveryInformation() {
-        driver.manage().window().maximize();
-        driver.get("https://litecart.stqa.ru/en/");
+
 
         String trueTitleOfDeliveryInformation = "Delivery Information | My Store1";
 
@@ -87,8 +83,7 @@ public class CheckLiteCartTest {
 
     @Test
     public void TermsAndConditions() {
-        driver.manage().window().maximize();
-        driver.get("https://litecart.stqa.ru/en/");
+
 
         String trueTitleOfTermsAndConditions = "Terms & Conditions | My Store1";
 
@@ -110,8 +105,7 @@ public class CheckLiteCartTest {
 
     @Test
     public void checkDiscountsAndPromotions() {
-        driver.manage().window().maximize();
-        driver.get("https://litecart.stqa.ru/en/");
+
 
         String trueTitleOfDiscountsAndPromotions = "4 | My Store1";
         WebElement discountsAndPromotionsBtn = driver.findElement(By.xpath(
